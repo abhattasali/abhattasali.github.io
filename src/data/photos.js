@@ -1,7 +1,6 @@
 import IMG_FRISBEE from "../Images/Photos/p1.jpg";
 import IMG_LISBON from "../Images/Photos/p2.png";
 import IMG_BIGSUR from "../Images/Photos/p3.jpg";
-//import IMG_WINDOW from "../Images/Photos/p4.jpg";
 import IMG_HAWAII from "../Images/Photos/p5.png";
 import IMG_MIMOSAS from "../Images/Photos/p6.jpg";
 import IMG_PORTO from "../Images/Photos/p7.png";
