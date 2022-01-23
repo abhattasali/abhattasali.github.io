@@ -1,0 +1,164 @@
+.bio {
+  background-color: #fff;
+  width: 100%;
+  height: auto;
+  overflow-x: hidden;
+  padding-top: 35px;
+}
+
+.bio h1 {
+  font-family: "Montserrat", sans-serif;
+}
+
+.bio h2,
+.bio h3,
+.bio h6,
+.bio p {
+  font-family: "Lato", sans-serif;
+  font-weight: bold;
+}
+
+.bio h1 {
+  text-align: center;
+  font-weight: bold;
+  color: black;
+}
+
+.bio h3 {
+  color: black;
+  margin-right: 25%;
+  margin-left: 15%;
+  font-size: 30px;
+}
+
+.bio h6 {
+  text-align: center;
+  color: #9f9f9f;
+  font-family: "Montserrat", sans-serif;
+  font-weight: normal;
+}
+
+.bio p {
+  font-size: 14px;
+  margin-right: 25%;
+  margin-left: 15%;
+  color: #9f9f9f;
+}
+
+.bio-row {
+  padding: 2%;
+}
+
+.bio-col {
+  padding: auto 10%;
+}
+.bio-image {
+  margin-top: 50px;
+  width: 80%;
+  height: auto;
+  max-width: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateX(-35%);
+}
+@media (max-width: 1000px) {
+  .bio-image {
+    margin-left: 50%;
+    transform: translateX(-50%);
+    max-width: 300px;
+  }
+}
+
+.bio-description {
+  height: 50px;
+}
+.display {
+  position: absolute;
+  text-align: left;
+  text-decoration: 4px underline;
+  text-decoration-color: #f7cccc;
+  font-size: 30px;
+}
+
+.gradient-border {
+  --color-1: rebeccapurple;
+  --color-2: crimson;
+  --border-radius: 1.25rem;
+  --border-width: 0.5rem;
+  width: 100%;
+  padding: 2rem;
+  position: relative;
+  border-radius: var(--border-radius);
+}
+.gradient-border * + * {
+  margin-top: 0.5rem;
+}
+.gradient-border.-using-border-image {
+  border-width: var(--border-width);
+  border-style: solid;
+  border-image: linear-gradient(135deg, var(--color-1), var(--color-2)) 1
+    stretch;
+}
+.gradient-border.-using-clip-path {
+  clip-path: inset(0px round var(--border-radius));
+}
+.gradient-border.-using-pseudo-element {
+  position: relative;
+  padding: calc(2rem + var(--border-width));
+  border-radius: var(--border-radius);
+  background-image: linear-gradient(135deg, var(--color-1), var(--color-2));
+}
+.gradient-border.-using-pseudo-element * {
+  position: relative;
+  z-index: 1;
+}
+.gradient-border.-using-pseudo-element::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: var(--border-width);
+  right: var(--border-width);
+  bottom: var(--border-width);
+  left: var(--border-width);
+  border-radius: calc(var(--border-radius) - var(--border-width));
+  background-color: var(--background);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+:root {
+  --white: white;
+  --charcoal: #333;
+  --background: var(--white);
+  --foreground: var(--charcoal);
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: var(--charcoal);
+    --foreground: var(--white);
+  }
+}
+
+.bio p a {
+  position: relative;
+  overflow: hidden;
+  text-decoration: none;
+  color: #3f73af;
+}
+.bio p a::after {
+  content: "";
+  background: rgba(102, 167, 197, 0.25);
+  position: absolute;
+  left: 0px;
+  bottom: -3px;
+  width: 100%;
+  height: calc(100% - 10px);
+  z-index: -1;
+  transition: 0.35s cubic-bezier(0.25, 0.1, 0, 2.05);
+}
+.bio p a:hover:after {
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  height: 100%;
+}

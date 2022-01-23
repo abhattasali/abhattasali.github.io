@@ -1,25 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import WelcomeBar from "./WelcomeBar";
+import IconBar from "./IconBar";
+import PageBottom from "./PageBottom";
+import ScrollToTopBtn from "./ScrollToTop";
+import Timeline from "./Timeline";
+import Interest from "./Interest";
+import Photos from "./Photos";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+
+export default class App extends Component {
+  render() {
+    return (
+      <div>
+        <WelcomeBar />
+        <Timeline />
+        <Interest />
+        <Photos />
+        <br/>
+        <IconBar /> 
+        <PageBottom />
+        <ScrollToTopBtn />
+      </div>
+
   );
+  }
 }
-
-export default App;
